@@ -1,85 +1,80 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="420" viewBox="0 0 1200 420" role="img" aria-labelledby="title desc">
-  <title id="title">Hamza Zulfiqar — systems in motion</title>
-  <desc id="desc">Animated engineering system map for a full-stack and applied AI engineer.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="430" viewBox="0 0 1200 430" role="img" aria-labelledby="title desc">
+  <title id="title">Hamza makes software</title>
+  <desc id="desc">A colorful animated, hand-crafted developer profile banner.</desc>
   <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0" stop-color="#050912"/>
-      <stop offset="0.52" stop-color="#0b1f33"/>
-      <stop offset="1" stop-color="#071a26"/>
-    </linearGradient>
-    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0" stop-color="#38bdf8"/>
-      <stop offset="0.5" stop-color="#a78bfa"/>
-      <stop offset="1" stop-color="#34d399"/>
-    </linearGradient>
-    <radialGradient id="halo">
-      <stop offset="0" stop-color="#38bdf8" stop-opacity="0.22"/>
-      <stop offset="1" stop-color="#38bdf8" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-      <path d="M40 0H0V40" fill="none" stroke="#94a3b8" stroke-opacity="0.075" stroke-width="1"/>
+    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.4" fill="#172554" opacity="0.18"/>
     </pattern>
-    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
+      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
+      <feComponentTransfer in="gray" result="softNoise"><feFuncA type="table" tableValues="0 0.045"/></feComponentTransfer>
+      <feBlend in="SourceGraphic" in2="softNoise" mode="multiply"/>
     </filter>
-    <clipPath id="viewport"><rect x="26" y="26" width="1148" height="368" rx="24"/></clipPath>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="7" dy="8" stdDeviation="0" flood-color="#172554" flood-opacity="1"/>
+    </filter>
+    <clipPath id="frame"><rect x="18" y="18" width="1164" height="394" rx="24"/></clipPath>
   </defs>
 
-  <rect width="1200" height="420" rx="30" fill="#020617"/>
-  <rect x="14" y="14" width="1172" height="392" rx="28" fill="url(#bg)" stroke="#1e3a52"/>
-  <g clip-path="url(#viewport)">
-    <rect x="26" y="26" width="1148" height="368" fill="url(#grid)"/>
-    <circle cx="980" cy="40" r="260" fill="url(#halo)">
-      <animate attributeName="cx" values="980;1060;980" dur="10s" repeatCount="indefinite"/>
-    </circle>
-    <rect x="26" y="-40" width="1148" height="80" fill="url(#beam)" opacity="0.05">
-      <animate attributeName="y" values="-80;420" dur="5.5s" repeatCount="indefinite"/>
-    </rect>
-  </g>
+  <rect width="1200" height="430" rx="30" fill="#172554"/>
+  <g clip-path="url(#frame)">
+    <rect x="18" y="18" width="1164" height="394" rx="24" fill="#fff7df" filter="url(#paper)"/>
+    <rect x="18" y="18" width="1164" height="394" fill="url(#dots)"/>
 
-  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
-    <text x="68" y="72" fill="#64748b" font-size="14" letter-spacing="3">HZ / SYSTEM MAP / 2026</text>
-    <circle cx="1090" cy="67" r="5" fill="#34d399" filter="url(#glow)">
-      <animate attributeName="opacity" values="1;.25;1" dur="1.8s" repeatCount="indefinite"/>
-    </circle>
-    <text x="1105" y="73" fill="#86efac" font-size="13">BUILDING</text>
-
-    <text x="68" y="152" fill="#f8fafc" font-family="Segoe UI, Inter, Arial, sans-serif" font-size="64" font-weight="750" letter-spacing="-1">HAMZA ZULFIQAR</text>
-    <text x="70" y="194" fill="#bae6fd" font-size="20" letter-spacing="5">FULL-STACK × APPLIED AI ENGINEER</text>
-    <text x="70" y="230" fill="#94a3b8" font-size="16">I engineer the path from ambiguous workflow to dependable product.</text>
-
-    <g transform="translate(70 292)">
-      <path d="M70 24H258M328 24H516M586 24H774M844 24H1014" stroke="#334155" stroke-width="2" stroke-dasharray="7 9">
-        <animate attributeName="stroke-dashoffset" from="32" to="0" dur="2.2s" repeatCount="indefinite"/>
-      </path>
-
-      <g transform="translate(0)">
-        <rect width="140" height="48" rx="12" fill="#082f49" stroke="#0ea5e9"/>
-        <text x="70" y="30" fill="#e0f2fe" font-size="14" text-anchor="middle">WORKFLOW</text>
-      </g>
-      <g transform="translate(258)">
-        <rect width="140" height="48" rx="12" fill="#2e1065" stroke="#8b5cf6"/>
-        <text x="70" y="30" fill="#ede9fe" font-size="14" text-anchor="middle">MODEL</text>
-      </g>
-      <g transform="translate(516)">
-        <rect width="140" height="48" rx="12" fill="#052e2b" stroke="#14b8a6"/>
-        <text x="70" y="30" fill="#ccfbf1" font-size="14" text-anchor="middle">BOUNDARY</text>
-      </g>
-      <g transform="translate(774)">
-        <rect width="140" height="48" rx="12" fill="#052e16" stroke="#22c55e"/>
-        <text x="70" y="30" fill="#dcfce7" font-size="14" text-anchor="middle">PRODUCT</text>
-      </g>
-
-      <circle r="6" fill="#ffffff" filter="url(#glow)">
-        <animateMotion dur="5.2s" repeatCount="indefinite" path="M140 24H258M398 24H516M656 24H774"/>
-        <animate attributeName="fill" values="#38bdf8;#a78bfa;#34d399" dur="5.2s" repeatCount="indefinite"/>
+    <g opacity="0.9">
+      <circle cx="1080" cy="78" r="118" fill="#ff6b5e">
+        <animate attributeName="r" values="112;123;112" dur="4s" repeatCount="indefinite"/>
       </circle>
+      <circle cx="1045" cy="360" r="86" fill="#5eead4">
+        <animate attributeName="cy" values="360;345;360" dur="3.4s" repeatCount="indefinite"/>
+      </circle>
+      <path d="M914 0 1200 0 1200 118 1070 74Z" fill="#ffd84d" opacity="0.94"/>
     </g>
 
-    <text x="70" y="380" fill="#475569" font-size="12" letter-spacing="2">TYPE SAFETY / TENANT BOUNDARIES / HUMAN-CONTROLLED AI / RELEASE CONFIDENCE</text>
-    <text x="1123" y="380" fill="#38bdf8" font-size="19">▮
-      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
-    </text>
+    <g transform="translate(72 62)">
+      <rect x="0" y="0" width="248" height="38" rx="19" fill="#172554"/>
+      <circle cx="22" cy="19" r="6" fill="#5eead4">
+        <animate attributeName="opacity" values="1;.25;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <text x="42" y="25" fill="#fff7df" font-family="ui-monospace, Consolas, monospace" font-size="14" letter-spacing="2">OPEN TO GOOD PROBLEMS</text>
+    </g>
+
+    <g transform="translate(72 138)">
+      <text x="0" y="0" fill="#172554" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="700">HELLO, I’M HAMZA.</text>
+      <text x="0" y="82" fill="#172554" font-family="Trebuchet MS, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-4">I MAKE SOFTWARE</text>
+      <text x="0" y="134" fill="#172554" font-family="ui-monospace, Consolas, monospace" font-size="19">web products, useful tools &amp; the odd ambitious experiment</text>
+      <path d="M0 158 C155 139 323 176 530 153 S760 154 824 143" fill="none" stroke="#ff6b5e" stroke-width="10" stroke-linecap="round" stroke-dasharray="900" stroke-dashoffset="900">
+        <animate attributeName="stroke-dashoffset" from="900" to="0" dur="1.8s" fill="freeze"/>
+      </path>
+    </g>
+
+    <g transform="translate(920 132) rotate(-7 100 80)" filter="url(#shadow)">
+      <rect width="188" height="154" rx="18" fill="#2563eb" stroke="#172554" stroke-width="4"/>
+      <text x="94" y="55" text-anchor="middle" fill="#fff7df" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="700">DESIGN</text>
+      <text x="94" y="87" text-anchor="middle" fill="#fff7df" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="700">CODE</text>
+      <text x="94" y="119" text-anchor="middle" fill="#ffd84d" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="900">SHIP ↗</text>
+      <animateTransform attributeName="transform" type="rotate" values="-7 100 80;-3 100 80;-7 100 80" dur="4.2s" repeatCount="indefinite" additive="sum"/>
+    </g>
+
+    <g transform="translate(72 360)" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700" fill="#172554">
+      <text x="0" y="0">NEXT.JS</text><circle cx="88" cy="-5" r="4" fill="#ff6b5e"/>
+      <text x="108" y="0">TYPESCRIPT</text><circle cx="218" cy="-5" r="4" fill="#ff6b5e"/>
+      <text x="238" y="0">PYTHON</text><circle cx="312" cy="-5" r="4" fill="#ff6b5e"/>
+      <text x="332" y="0">POSTGRES</text><circle cx="430" cy="-5" r="4" fill="#ff6b5e"/>
+      <text x="450" y="0">PRODUCT THINKING</text>
+    </g>
+
+    <g transform="translate(1120 330)">
+      <path d="M0-22 6-7 22 0 6 7 0 22-6 7-22 0-6-7Z" fill="#ffd84d" stroke="#172554" stroke-width="3">
+        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
+      </path>
+    </g>
+
+    <g transform="translate(860 362)" fill="none" stroke="#172554" stroke-width="3" stroke-linecap="round">
+      <path d="M0 0q18-24 36 0t36 0 36 0 36 0" stroke-dasharray="180" stroke-dashoffset="180">
+        <animate attributeName="stroke-dashoffset" values="180;0" dur="2.3s" repeatCount="indefinite"/>
+      </path>
+    </g>
   </g>
 </svg>
