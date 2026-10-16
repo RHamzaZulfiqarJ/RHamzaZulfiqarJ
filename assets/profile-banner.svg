@@ -2,25 +2,15 @@
   <title id="title">Hamza makes software</title>
   <desc id="desc">A colorful animated, hand-crafted developer profile banner.</desc>
   <defs>
-    <pattern id="dots" width="26" height="26" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.4" fill="#172554" opacity="0.18"/>
-    </pattern>
-    <filter id="paper" x="-10%" y="-10%" width="120%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" seed="7" result="noise"/>
-      <feColorMatrix in="noise" type="saturate" values="0" result="gray"/>
-      <feComponentTransfer in="gray" result="softNoise"><feFuncA type="table" tableValues="0 0.045"/></feComponentTransfer>
-      <feBlend in="SourceGraphic" in2="softNoise" mode="multiply"/>
-    </filter>
     <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
       <feDropShadow dx="7" dy="8" stdDeviation="0" flood-color="#172554" flood-opacity="1"/>
     </filter>
     <clipPath id="frame"><rect x="18" y="18" width="1164" height="394" rx="24"/></clipPath>
   </defs>
 
-  <rect width="1200" height="430" rx="30" fill="#172554"/>
+  <rect width="1200" height="430" rx="30" fill="#020617"/>
   <g clip-path="url(#frame)">
-    <rect x="18" y="18" width="1164" height="394" rx="24" fill="#fff7df" filter="url(#paper)"/>
-    <rect x="18" y="18" width="1164" height="394" fill="url(#dots)"/>
+    <rect x="18" y="18" width="1164" height="394" rx="24" fill="#0b1220" stroke="#263449" stroke-width="2"/>
 
     <g opacity="0.9">
       <circle cx="1080" cy="78" r="118" fill="#ff6b5e">
@@ -41,23 +31,23 @@
     </g>
 
     <g transform="translate(72 138)">
-      <text x="0" y="0" fill="#172554" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="700">HELLO, I’M HAMZA.</text>
-      <text x="0" y="82" fill="#172554" font-family="Trebuchet MS, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-4">I MAKE SOFTWARE</text>
-      <text x="0" y="134" fill="#172554" font-family="ui-monospace, Consolas, monospace" font-size="19">web products, useful tools &amp; the odd ambitious experiment</text>
+      <text x="0" y="0" fill="#5eead4" font-family="Trebuchet MS, Arial, sans-serif" font-size="34" font-weight="700">HELLO, I’M HAMZA.</text>
+      <text x="0" y="82" fill="#f8fafc" font-family="Trebuchet MS, Arial, sans-serif" font-size="78" font-weight="900" letter-spacing="-4">I MAKE SOFTWARE</text>
+      <text x="0" y="134" fill="#cbd5e1" font-family="ui-monospace, Consolas, monospace" font-size="19">web products, useful tools &amp; the odd ambitious experiment</text>
       <path d="M0 158 C155 139 323 176 530 153 S760 154 824 143" fill="none" stroke="#ff6b5e" stroke-width="10" stroke-linecap="round" stroke-dasharray="900" stroke-dashoffset="900">
         <animate attributeName="stroke-dashoffset" from="900" to="0" dur="1.8s" fill="freeze"/>
       </path>
     </g>
 
     <g transform="translate(920 132) rotate(-7 100 80)" filter="url(#shadow)">
-      <rect width="188" height="154" rx="18" fill="#2563eb" stroke="#172554" stroke-width="4"/>
+      <rect width="188" height="154" rx="18" fill="#2563eb" stroke="#f8fafc" stroke-width="4"/>
       <text x="94" y="55" text-anchor="middle" fill="#fff7df" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="700">DESIGN</text>
       <text x="94" y="87" text-anchor="middle" fill="#fff7df" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="700">CODE</text>
       <text x="94" y="119" text-anchor="middle" fill="#ffd84d" font-family="Trebuchet MS, Arial, sans-serif" font-size="22" font-weight="900">SHIP ↗</text>
       <animateTransform attributeName="transform" type="rotate" values="-7 100 80;-3 100 80;-7 100 80" dur="4.2s" repeatCount="indefinite" additive="sum"/>
     </g>
 
-    <g transform="translate(72 360)" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700" fill="#172554">
+    <g transform="translate(72 360)" font-family="ui-monospace, Consolas, monospace" font-size="13" font-weight="700" fill="#cbd5e1">
       <text x="0" y="0">NEXT.JS</text><circle cx="88" cy="-5" r="4" fill="#ff6b5e"/>
       <text x="108" y="0">TYPESCRIPT</text><circle cx="218" cy="-5" r="4" fill="#ff6b5e"/>
       <text x="238" y="0">PYTHON</text><circle cx="312" cy="-5" r="4" fill="#ff6b5e"/>
@@ -66,12 +56,12 @@
     </g>
 
     <g transform="translate(1120 330)">
-      <path d="M0-22 6-7 22 0 6 7 0 22-6 7-22 0-6-7Z" fill="#ffd84d" stroke="#172554" stroke-width="3">
+      <path d="M0-22 6-7 22 0 6 7 0 22-6 7-22 0-6-7Z" fill="#ffd84d" stroke="#f8fafc" stroke-width="3">
         <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="7s" repeatCount="indefinite"/>
       </path>
     </g>
 
-    <g transform="translate(860 362)" fill="none" stroke="#172554" stroke-width="3" stroke-linecap="round">
+    <g transform="translate(860 362)" fill="none" stroke="#5eead4" stroke-width="3" stroke-linecap="round">
       <path d="M0 0q18-24 36 0t36 0 36 0 36 0" stroke-dasharray="180" stroke-dashoffset="180">
         <animate attributeName="stroke-dashoffset" values="180;0" dur="2.3s" repeatCount="indefinite"/>
       </path>
