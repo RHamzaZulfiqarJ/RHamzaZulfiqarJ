@@ -1,26 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="96" viewBox="0 0 1200 96" role="img" aria-labelledby="title desc">
-  <title id="title">Make it clear, useful, and lasting</title>
-  <desc id="desc">A colorful animated closing banner.</desc>
-  <defs>
-    <clipPath id="clip"><rect width="1200" height="96" rx="20"/></clipPath>
-  </defs>
-  <g clip-path="url(#clip)">
-    <rect width="1200" height="96" fill="#172554"/>
-    <circle cx="90" cy="48" r="85" fill="#ff6b5e" opacity="0.95">
-      <animate attributeName="cx" values="75;115;75" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="1110" cy="48" r="96" fill="#5eead4" opacity="0.92">
-      <animate attributeName="cx" values="1130;1080;1130" dur="5s" repeatCount="indefinite"/>
-    </circle>
-    <path d="M0 78Q150 30 300 78T600 78T900 78T1200 78" fill="none" stroke="#ffd84d" stroke-width="5" stroke-dasharray="18 15">
-      <animate attributeName="stroke-dashoffset" from="66" to="0" dur="2s" repeatCount="indefinite"/>
-    </path>
-    <rect x="258" y="17" width="684" height="54" rx="27" fill="#fff7df" stroke="#172554" stroke-width="3"/>
-    <text x="600" y="51" text-anchor="middle" fill="#172554" font-family="ui-monospace, Consolas, monospace" font-size="17" font-weight="700" letter-spacing="3">MAKE IT CLEAR · MAKE IT USEFUL · MAKE IT LAST</text>
-    <g transform="translate(974 48)">
-      <path d="M0-14 4-4 14 0 4 4 0 14-4 4-14 0-4-4Z" fill="#ffd84d">
-        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
-      </path>
-    </g>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="92" viewBox="0 0 1200 92" role="img" aria-labelledby="title desc">
+  <title id="title">Interfaces, systems, intelligence</title>
+  <desc id="desc">A subtle animated line joining three parts of Hamza's work.</desc>
+  <rect width="1200" height="92" rx="18" fill="#0b1424"/>
+  <rect x="1" y="1" width="1198" height="90" rx="17" fill="none" stroke="#243449" stroke-width="2"/>
+  <path d="M288 46H420M780 46H912" fill="none" stroke="#34445c" stroke-width="3"/>
+  <path d="M288 46H420M780 46H912" fill="none" stroke="#5eead4" stroke-width="3" stroke-dasharray="28 240">
+    <animate attributeName="stroke-dashoffset" from="0" to="-268" dur="3.5s" repeatCount="indefinite"/>
+  </path>
+  <g fill="#e2e8f0" font-family="Consolas, 'Courier New', monospace" font-size="19" font-weight="700" letter-spacing="2" text-anchor="middle">
+    <text x="154" y="53">INTERFACES</text>
+    <text x="600" y="53">SYSTEMS</text>
+    <text x="1040" y="53">INTELLIGENCE</text>
   </g>
 </svg>
