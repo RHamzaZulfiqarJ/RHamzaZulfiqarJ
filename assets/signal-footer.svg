@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="86" viewBox="0 0 1200 86" role="img" aria-labelledby="title desc">
+  <title id="title">System signal</title>
+  <desc id="desc">Animated signal representing continuous product iteration.</desc>
+  <defs>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#38bdf8" stop-opacity="0"/>
+      <stop offset="0.2" stop-color="#38bdf8"/>
+      <stop offset="0.55" stop-color="#a78bfa"/>
+      <stop offset="0.82" stop-color="#34d399"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="3"/></filter>
+  </defs>
+  <rect width="1200" height="86" rx="18" fill="#050912"/>
+  <path d="M35 44H205l18-22 24 44 28-44 24 22h177l16-12 18 24 20-24 18 12h145l20-30 30 60 28-60 22 30h226" fill="none" stroke="#38bdf8" stroke-opacity="0.2" stroke-width="8" filter="url(#glow)"/>
+  <path d="M35 44H205l18-22 24 44 28-44 24 22h177l16-12 18 24 20-24 18 12h145l20-30 30 60 28-60 22 30h226" fill="none" stroke="url(#line)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="82 26">
+    <animate attributeName="stroke-dashoffset" from="108" to="0" dur="2.8s" repeatCount="indefinite"/>
+  </path>
+  <circle cx="35" cy="44" r="4" fill="#38bdf8">
+    <animate attributeName="opacity" values=".2;1;.2" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="1165" cy="44" r="4" fill="#34d399">
+    <animate attributeName="opacity" values="1;.2;1" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+</svg>
